@@ -1,0 +1,9 @@
+services:
+  flask:
+    container_name: flask
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./source:/app
+    command: python3 -m flask run --host=0.0.0.0 --debugger --reload
