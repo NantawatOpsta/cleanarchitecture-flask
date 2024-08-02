@@ -26,6 +26,7 @@ def promotion():
         })
     return {'promotions': promotion_json}
 
+
 @app.route('/product')
 def product():
     product_usecase = ProductUseCase()
@@ -39,7 +40,9 @@ def product():
             'price': product.price,
             'group': product.group
         })
+
     return {'products': product_json}
+
 
 @app.route('/product/discount')
 def product_discount():
@@ -52,9 +55,11 @@ def product_discount():
             'product_id': product.product_id,
             'name': product.name,
             'price': product.price,
-            'group': product.group
+            'group': product.group,
+            'discount_price': product.discount_price
         })
     return {'products': product_json}
+
 
 if __name__ == "__main__":
     app.run(debug=True)

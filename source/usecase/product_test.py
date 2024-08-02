@@ -14,4 +14,4 @@ class ProductUseCaseTest(unittest.TestCase):
         product_usecase = ProductUseCase()
         products = product_usecase.get_products_with_discount_price()
         self.assertEqual(len(products), 6)
-        self.assertEqual(products[0].price, 0.45)
+        self.assertEqual(products[0].discount_price, 0.45)

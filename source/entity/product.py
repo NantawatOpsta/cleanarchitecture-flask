@@ -5,6 +5,7 @@ class Product:
     price = None
     quantity = None
     group = None
+    discount_price = None
 
     def __init__(self, product_id, name, price, quantity, group):
         self.product_id = product_id
